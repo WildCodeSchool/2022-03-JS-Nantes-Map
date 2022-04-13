@@ -2,7 +2,7 @@ import React from "react";
 
 function Agenda() {
   return (
-    <div className="City-tour">
+    <div className="Agenda">
       <h1>Agenda</h1>
     </div>
   );

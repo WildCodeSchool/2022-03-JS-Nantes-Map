@@ -4,7 +4,8 @@ function Citytour() {
   return (
     <div className="City-tour">
       <h1>City tour</h1>
-    </div>);
+    </div>
+  );
 }
 
 export default Citytour;
