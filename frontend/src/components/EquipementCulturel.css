@@ -1,10 +1,9 @@
 .liste {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .bloc-equipement {
-    background-color: red;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloc-equipement {
+  background-color: red;
+}
