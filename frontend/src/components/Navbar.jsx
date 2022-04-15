@@ -17,7 +17,7 @@ export default function Navbar() {
           <Link to="/Agenda">AGENDA</Link>
         </div>
         <div className="citytour">
-          <Link to="/City tour">CITY TOUR</Link>
+          <Link to="/Citytour">CITY TOUR</Link>
         </div>
       </div>
     </div>
