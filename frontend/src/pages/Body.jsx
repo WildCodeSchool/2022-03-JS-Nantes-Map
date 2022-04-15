@@ -1,7 +1,7 @@
 import React from "react";
 import Agenda from "@pages/Agenda";
 import Home from "@pages/Home";
-import Citytour from "@pages/City tour";
+import Citytour from "@pages/Citytour";
 import { Route, Routes } from "react-router-dom";
 
 export default function Body() {
