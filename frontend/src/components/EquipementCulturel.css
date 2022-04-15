@@ -5,5 +5,6 @@
 }
 
 .bloc-equipement {
-  background-color: red;
+  background-color: var(--primary-color);
+  color: white;
 }

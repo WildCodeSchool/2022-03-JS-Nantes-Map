@@ -17,7 +17,18 @@ function EquipementCulturel() {
       "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_equipements-culturels-nantes-tarifs&q=&rows=194&facet=nom_complet&facet=type_tarif"
     )
       .then((res) => res.json())
-      .then((data) => setEquipements(data.records));
+      .then((data) => {
+        const tableWithDuplicates = data.records;
+        const tableOfIdobj = [];
+        const tableWithoutDuplicates = [];
+        tableWithDuplicates.forEach((element) => {
+          if (!tableOfIdobj.includes(element.fields.idobj)) {
+            tableWithoutDuplicates.push(element);
+            tableOfIdobj.push(element.fields.idobj);
+          }
+        });
+        setEquipements(tableWithoutDuplicates);
+      });
   }, []);
 
   return (

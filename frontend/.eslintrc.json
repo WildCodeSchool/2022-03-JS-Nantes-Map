@@ -18,7 +18,7 @@
   "plugins": ["react", "import"],
   "rules": {
     "no-console": "off",
-    "react/prop-types" : "off",
+    "react/prop-types": "off",
     "no-restricted-syntax": [
       "error",
       {
