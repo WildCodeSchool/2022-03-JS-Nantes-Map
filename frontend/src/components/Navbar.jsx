@@ -1,11 +1,25 @@
 import React from "react";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <div className="Navbar">
-      <h1>Navbar</h1>
+    <div className="navbar">
+      <div className="banniere">
+        <img
+          src="src/assets/Bannière Mobile.png"
+          className="banniere"
+          alt="banniere"
+        />
+      </div>
+      <div className="liens">
+        <div className="agenda">
+          <Link to="/Agenda">AGENDA</Link>
+        </div>
+        <div className="citytour">
+          <Link to="/City tour">CITY TOUR</Link>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default Navbar;

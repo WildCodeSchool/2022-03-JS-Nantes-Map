@@ -1,11 +1,45 @@
 import React from "react";
+import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTwitter,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-function Footer() {
+export default function Footer() {
   return (
-    <div className="Footer">
-      <h1>Footer</h1>
-    </div>
+    <footer>
+      <h1> {`PARTEZ À L'AVENTURE DE LA CULTURE`} </h1>
+      <h2>
+        <button
+          type="button"
+          className="pictoreseaux"
+          onClick={() => {
+            window.location.href = "/https://www.facebook.com";
+          }}
+        >
+          <FontAwesomeIcon icon={faFacebook} className="pictoFooter" />{" "}
+        </button>
+        <button
+          type="button"
+          className="pictoreseaux"
+          onClick={() => {
+            window.location.href = "/https://www.instagram.com";
+          }}
+        >
+          <FontAwesomeIcon icon={faTwitter} className="pictoFooter" />{" "}
+        </button>
+        <button
+          type="button"
+          className="pictoreseaux"
+          onClick={() => {
+            window.location.href = "/https://twitter.com";
+          }}
+        >
+          <FontAwesomeIcon icon={faLinkedin} className="pictoFooter" />{" "}
+        </button>
+      </h2>
+    </footer>
   );
 }
-
-export default Footer;
