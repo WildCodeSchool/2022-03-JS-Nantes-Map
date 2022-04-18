@@ -1,0 +1,10 @@
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bloc-equipement {
+  background-color: var(--primary-color);
+  color: white;
+}
