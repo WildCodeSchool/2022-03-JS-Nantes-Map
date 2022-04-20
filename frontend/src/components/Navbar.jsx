@@ -6,7 +6,8 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="banniere">
-        <Link to="/Home"><img
+        <Link to="/Home">
+          <img
             src="src/assets/Bannière Mobile.png"
             className="banniere"
             alt="banniere"
