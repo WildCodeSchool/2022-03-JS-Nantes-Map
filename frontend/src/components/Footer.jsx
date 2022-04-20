@@ -10,8 +10,8 @@ import {
 export default function Footer() {
   return (
     <footer>
-      <h1> {`PARTEZ À L'AVENTURE DE LA CULTURE`} </h1>
-      <h2>
+      <h1 className="titleslogan"> {`PARTEZ À L'AVENTURE DE LA CULTURE`} </h1>
+      <h2 className="alignpictos">
         <button
           type="button"
           className="pictoreseaux"
