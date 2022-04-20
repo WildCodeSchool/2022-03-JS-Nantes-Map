@@ -33,12 +33,21 @@ function EquipementCulturel() {
 
   return (
     <div className="Equipement-culturel">
-      <h1>Les lieux culturels</h1>
-      <FontAwesomeIcon icon={faChessRook} />
-      <FontAwesomeIcon icon={faBuildingColumns} />
-      <FontAwesomeIcon icon={faFilm} />
-      <FontAwesomeIcon icon={faBookOpenReader} />
-
+      <h1>LES LIEUX CULTURELS</h1>
+      <div className="flexbuttons">
+        <button type="button" className="pictolieuxculturels">
+          <FontAwesomeIcon icon={faChessRook} className="pictoculture" />{" "}
+        </button>
+        <button type="button" className="pictolieuxculturels">
+          <FontAwesomeIcon icon={faBuildingColumns} className="pictoculture" />{" "}
+        </button>
+        <button type="button" className="pictolieuxculturels">
+          <FontAwesomeIcon icon={faFilm} className="pictoculture" />{" "}
+        </button>
+        <button type="button" className="pictolieuxculturels">
+          <FontAwesomeIcon icon={faBookOpenReader} className="pictoculture" />{" "}
+        </button>
+      </div>
       <h1 className="liste">
         {equipements.map((equipement) => (
           <Equipement equipement={equipement} />
