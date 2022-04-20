@@ -6,11 +6,12 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="banniere">
-        <img
-          src="src/assets/Bannière Mobile.png"
-          className="banniere"
-          alt="banniere"
-        />
+        <Link to="/Home"><img
+            src="src/assets/Bannière Mobile.png"
+            className="banniere"
+            alt="banniere"
+          />
+        </Link>
       </div>
       <div className="liens">
         <div className="agenda">
