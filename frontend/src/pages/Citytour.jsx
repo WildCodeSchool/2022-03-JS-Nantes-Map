@@ -1,6 +1,6 @@
 import React from "react";
-import Map from "../components/Map";
 import EquipementCulturel from "@components/EquipementCulturel";
+import Map from "../components/Map";
 
 function Citytour() {
   return (
