@@ -6,8 +6,8 @@ import {
   faFilm,
   faBookOpenReader,
 } from "@fortawesome/free-solid-svg-icons";
-import "./EquipementCulturel.css";
 import Equipement from "./Equipement";
+import "./EquipementCulturel.css";
 
 function EquipementCulturel() {
   const [equipements, setEquipements] = useState([]);
