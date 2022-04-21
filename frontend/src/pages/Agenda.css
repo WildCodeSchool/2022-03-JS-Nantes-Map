@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #446699;
+    --brown-color: #ddaa88;
+    --beige-color: #f7cfb5;
+    --brighter-color: #f4edde;
+    --darker-color: #666677;
+  
+    --title-font: "Happy Monkey", cursive;
+    --body-font: "Kanit", sans-serif;
+  }
+
+.pictoscategories {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 3px 2px 2px #666677;
+    margin: 1rem;
+    background-color: white;
+}
+
+.pictoagenda {
+    height: 1.5rem;
+    color: var(--primary-color);
+}
+
+.Agenda {
+    text-align: center;
+}
