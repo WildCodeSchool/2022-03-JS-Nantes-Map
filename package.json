@@ -26,6 +26,6 @@
     "@fortawesome/react-fontawesome": "^0.1.18",
     "git": "^0.1.5",
     "react-router-dom": "^6.3.0",
-    "status": "^0.0.13"
+    "status": "^0.0.6"
   }
 }

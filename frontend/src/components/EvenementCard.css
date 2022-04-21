@@ -4,31 +4,56 @@
   padding: 1.25em;
   width: 90%;
   align-items: center;
-  border: 1px solid #f8f8f8;
-  border-radius: 2px;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
-  font-size: 1.2em;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px #666677;
+  font-size: 0.75em;
   background-color: var(--primary-color);
-  color: white;
+  color: var(--brighter-color);
   margin-bottom: 2rem;
 }
 
-.EvenementCard img {
-  max-width: 100px;
-  margin-right: 1.5rem;
+.EvenementCard h3 {
+  padding: 20px;
+  text-transform: uppercase;
+  color: var(--beige-color);
+}
+
+.photo {
+  max-width: 300px;
+  padding: 10px;
 }
 
 .description-event {
-  height: 5rem;
   overflow: auto;
+  height: 10rem;
 }
 
 p {
-  margin: initial;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(----darker-color);
+  text-decoration: none;
 }
 
 .body-homepage {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background: #666677;
+  background: linear-gradient(0deg, #ddaa88 0%, #f7cfb5 100%);
+  border: none;
+  margin: 10px;
+}
+
+button:hover {
+  background: #666677;
+  background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
 }
