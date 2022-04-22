@@ -22,6 +22,8 @@ body {
   font-family: var(--body-font);
 }
 h1 {
+  display: flex;
+  justify-content: center;
   font-size: 1rem;
   color: var(--darker-color);
   font-family: var(--title-font);

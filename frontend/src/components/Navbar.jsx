@@ -1,26 +1,31 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
+const getActiveLinkStyle = ({ isActive }) => {
+  if (isActive) return { backgroundColor: "#f7cfb5" };
+  return { backgroundColor: "#446699" };
+};
 export default function Navbar() {
   return (
     <div className="navbar">
-      <div className="banniere">
+      <div className="bannière">
         <Link to="/Home">
           <img
             src="src/assets/Bannière Mobile.png"
             className="banniere"
-            alt="banniere"
+            alt="bannière"
           />
         </Link>
       </div>
       <div className="liens">
-        <div className="agenda">
-          <Link to="/Agenda">AGENDA</Link>
-        </div>
-        <div className="citytour">
-          <Link to="/Citytour">CITY TOUR</Link>
-        </div>
+        <NavLink className="link" style={getActiveLinkStyle} to="/Agenda">
+          AGENDA
+        </NavLink>
+
+        <NavLink className="link" style={getActiveLinkStyle} to="/Citytour">
+          CITY TOUR
+        </NavLink>
       </div>
     </div>
   );
