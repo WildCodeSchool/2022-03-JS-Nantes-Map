@@ -4,7 +4,7 @@
   padding: 1.25em;
   width: 90%;
   align-items: center;
-  border-radius: 50px;
+  border-radius: 25px;
   box-shadow: 5px 5px 5px #666677;
   font-size: 0.75em;
   background-color: var(--primary-color);
@@ -15,7 +15,9 @@
 .EvenementCard h3 {
   padding: 20px;
   text-transform: uppercase;
-  color: var(--beige-color);
+  font-family: var(--title-font);
+  font-size: 1.5em;
+  color: var(--brighter-color);
 }
 
 .photo {
@@ -32,6 +34,10 @@ p {
   margin-bottom: 2rem;
 }
 
+.icone {
+  margin-bottom: 0.5em;
+}
+
 a {
   color: var(----darker-color);
   text-decoration: none;
@@ -46,10 +52,11 @@ a {
 button {
   width: 200px;
   height: 50px;
+  font-family: var(--title-font);
   text-align: center;
   background: #666677;
   background: linear-gradient(0deg, #ddaa88 0%, #f7cfb5 100%);
-  border: none;
+  border-radius: 5px;
   margin: 10px;
 }
 
