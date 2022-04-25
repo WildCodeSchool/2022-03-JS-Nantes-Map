@@ -49,7 +49,7 @@ a {
   align-items: center;
 }
 
-button {
+.buttonecard {
   width: 200px;
   height: 50px;
   font-family: var(--title-font);
@@ -60,7 +60,7 @@ button {
   margin: 10px;
 }
 
-button:hover {
+.buttonecard:hover {
   background: #666677;
   background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
 }

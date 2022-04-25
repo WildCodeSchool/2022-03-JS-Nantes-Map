@@ -9,11 +9,13 @@ body {
   background-color: #f2f2f2;
 }
 
-.banniere {
+.bannieremobile,
+.bannieredesktop {
   width: 100%;
 }
 
 .liens {
+  font-family: var(--title-font);
   display: flex;
   justify-content: space-around;
   background-color: #446699;
@@ -26,4 +28,42 @@ body {
   width: 100%;
   background-color: #446699;
   text-align: center;
+}
+img.bannieredesktop {
+  display: none;
+}
+img.bannieremobile {
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  img.bannieremobile {
+    display: none;
+  }
+  img.bannieredesktop {
+    display: block;
+  }
+
+  .liens {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    margin-right: 40px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+  }
+
+  .link {
+    border-radius: 80px;
+    width: 6rem;
+    height: 6rem;
+    box-shadow: 3px 3px 3px #666677;
+  }
+
+  a.link {
+    text-align: center;
+    line-height: 6;
+  }
 }
