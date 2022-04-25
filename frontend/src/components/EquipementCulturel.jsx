@@ -11,6 +11,7 @@ import "./EquipementCulturel.css";
 
 function EquipementCulturel() {
   const [equipements, setEquipements] = useState([]);
+  const [filteredEquipements, setFilteredEquipements] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -28,29 +29,82 @@ function EquipementCulturel() {
           }
         });
         setEquipements(tableWithoutDuplicates);
+        setFilteredEquipements(tableWithoutDuplicates);
       });
   }, []);
+  
+  function filterLecture() {
+    const filterBiblio = equipements.filter(
+      (place) =>
+        place.fields.nom_complet.includes("Bibliothèque") ||
+        place.fields.nom_complet.includes("Médiathèque") ||
+        place.fields.nom_complet.includes("Centre")
+    );
+    return filterBiblio;
+  }
+
+  function filterMuseum() {
+    const filterMusee = equipements.filter(
+      (place) =>
+        place.fields.nom_complet.includes("Musée") ||
+        place.fields.nom_complet.includes("Muséum d'Histoire") ||
+        place.fields.nom_complet.includes("Chronographe")
+    );
+    return filterMusee;
+  }
+
+  function filterCinema() {
+    const filterCine = equipements.filter((place) =>
+      place.fields.nom_complet.includes("Cinéma")
+    );
+    return filterCine;
+  }
+
+  function filterMonuments() {
+    const filterPatrimoine = equipements.filter(
+      (place) =>
+        place.fields.nom_complet.includes("Château") ||
+        place.fields.nom_complet.includes("Planétarium")
+    );
+    return filterPatrimoine;
+  }
 
   return (
     <div className="Equipement-culturel">
       <h1>LES LIEUX CULTURELS</h1>
       <div className="flexbuttons">
-        <button type="button" className="pictolieuxculturels">
+        <button
+          type="button"
+          className="pictolieuxculturels"
+          onClick={() => setFilteredEquipements(filterMonuments(equipements))}
+        >
           <FontAwesomeIcon icon={faChessRook} className="pictoculture" />{" "}
         </button>
-        <button type="button" className="pictolieuxculturels">
+        <button
+          type="button"
+          className="pictolieuxculturels"
+          onClick={() => setFilteredEquipements(filterMuseum(equipements))}
+        >
           <FontAwesomeIcon icon={faBuildingColumns} className="pictoculture" />{" "}
         </button>
-        <button type="button" className="pictolieuxculturels">
+        <button
+          type="button"
+          className="pictolieuxculturels"
+          onClick={() => setFilteredEquipements(filterCinema(equipements))}
+        >
           <FontAwesomeIcon icon={faFilm} className="pictoculture" />{" "}
         </button>
-        <button type="button" className="pictolieuxculturels">
+        <button
+          type="button"
+          className="pictolieuxculturels"
+          onClick={() => setFilteredEquipements(filterLecture(equipements))}
+        >
           <FontAwesomeIcon icon={faBookOpenReader} className="pictoculture" />{" "}
         </button>
       </div>
       <h1 className="liste">
-        {equipements.map((equipement) => (
-          <Equipement equipement={equipement} />
+        {filteredEquipements.map((equipement) => (
+          <Equipement equipement={equipement} key={equipement.fields.idobj} />
         ))}
       </h1>
     </div>
