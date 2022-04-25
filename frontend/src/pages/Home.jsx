@@ -49,9 +49,9 @@ export default function Home() {
   if (randomEvent && freeEvent) {
     return (
       <div className="body-homepage">
-        <h1>Ca se passe bientôt...</h1>
+        <h1>CA SE PASSE BIENTOT...</h1>
         <EvenementCard event={randomEvent} />
-        <h1>{`Ca se passe bientôt... et c'est gratuit!`}</h1>
+        <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
         <EvenementCard event={freeEvent} />
       </div>
     );

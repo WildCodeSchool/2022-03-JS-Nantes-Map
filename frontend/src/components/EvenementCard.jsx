@@ -17,7 +17,7 @@ export default function EvenementCard({ event }) {
 
       <p>{event.fields.lieu}</p>
 
-      <button type="button">
+      <button className="buttonecard" type="button">
         <a href={event.fields.lien_agenda} target="_blank" rel="noreferrer">
           En savoir plus...
         </a>
