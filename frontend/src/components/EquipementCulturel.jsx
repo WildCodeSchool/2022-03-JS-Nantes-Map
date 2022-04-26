@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line import/no-unresolved
 import Button from "@components/Button";
 import {
   faChessRook,
@@ -62,7 +61,7 @@ function EquipementCulturel() {
         <Button
           setFilteredEquipements={setFilteredEquipements}
           equipements={equipements}
-          filters={["Blibliothèque", "Médiathèque", "Centre"]}
+          filters={["Bibliothèque", "Médiathèque", "Centre"]}
           icon={faBookOpenReader}
         />
       </div>
