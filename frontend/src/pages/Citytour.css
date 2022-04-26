@@ -1,0 +1,10 @@
+@media screen and (min-width: 769px) {
+  .City-tour {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bloc-equipement {
+    width: 70%;
+  }
+}
