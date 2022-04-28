@@ -15,10 +15,15 @@ export default function EvenementCard({ event }) {
 
       <img className="icone" src="src/assets/lieu.png" alt="icone lieu" />
 
-      <p>{event.fields.lieu}</p>
+      <p className="nom-lieu">{event.fields.lieu}</p>
 
       <button className="buttonecard" type="button">
-        <a className="textebutton" href={event.fields.lien_agenda} target="_blank" rel="noreferrer">
+        <a
+          className="textebutton"
+          href={event.fields.lien_agenda}
+          target="_blank"
+          rel="noreferrer"
+        >
           En savoir plus...
         </a>
       </button>

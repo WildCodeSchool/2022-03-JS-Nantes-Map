@@ -51,12 +51,12 @@ export default function Home() {
     return (
       <div className="body-homepage">
         <div className="event-soon">
-        <h1>CA SE PASSE BIENTOT...</h1>
-        <EvenementCard event={randomEvent} />
+          <h1>CA SE PASSE BIENTOT...</h1>
+          <EvenementCard event={randomEvent} />
         </div>
         <div className="event-free">
-        <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
-        <EvenementCard event={freeEvent} />
+          <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
+          <EvenementCard event={freeEvent} />
         </div>
       </div>
     );
@@ -65,6 +65,7 @@ export default function Home() {
     <img
       src="https://cutewallpaper.org/21/loading-gif-transparent-background/Tag-For-Loading-Bar-Gif-Transparent-Loading-Gif-.gif"
       alt="loading"
+      className="loading-img"
     />
   );
 }
