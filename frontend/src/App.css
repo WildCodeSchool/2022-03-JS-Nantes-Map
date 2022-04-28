@@ -59,3 +59,10 @@ button {
 button:hover {
   background: linear-gradient(0deg, white 0%, grey 100%);
 }
+
+@media screen and (min-width: 769px) {
+  p {
+  font-size: 0.8rem;
+  
+  }
+}

@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React, { useState, useEffect } from "react";
 import EvenementCard from "@components/EvenementCard";
+import "./Home.css";
 
 export default function Home() {
   const [randomEvent, setRandomEvent] = useState(null);
@@ -49,10 +50,14 @@ export default function Home() {
   if (randomEvent && freeEvent) {
     return (
       <div className="body-homepage">
+        <div className="event-soon">
         <h1>CA SE PASSE BIENTOT...</h1>
         <EvenementCard event={randomEvent} />
+        </div>
+        <div className="event-free">
         <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
         <EvenementCard event={freeEvent} />
+        </div>
       </div>
     );
   }

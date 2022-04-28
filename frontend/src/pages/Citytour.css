@@ -1,10 +1,12 @@
 @media screen and (min-width: 769px) {
   .City-tour {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .bloc-equipement {
     width: 70%;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
   }
 }
