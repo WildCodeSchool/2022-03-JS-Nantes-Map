@@ -67,11 +67,11 @@ function Agenda() {
         </button>
       </h2>
 
-      <h3 className="listeagenda">
+      <div className="listeagenda">
         {evenements.map((evenement) => (
           <EvenementCard event={evenement} />
         ))}
-      </h3>
+      </div>
     </div>
   );
 }
