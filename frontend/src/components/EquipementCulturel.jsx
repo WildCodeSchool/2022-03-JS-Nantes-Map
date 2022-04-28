@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Button from "@components/Button";
 import {
   faChessRook,
   faBuildingColumns,
@@ -11,6 +11,7 @@ import "./EquipementCulturel.css";
 
 function EquipementCulturel() {
   const [equipements, setEquipements] = useState([]);
+  const [filteredEquipements, setFilteredEquipements] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -28,6 +29,7 @@ function EquipementCulturel() {
           }
         });
         setEquipements(tableWithoutDuplicates);
+        setFilteredEquipements(tableWithoutDuplicates);
       });
   }, []);
 
@@ -35,22 +37,37 @@ function EquipementCulturel() {
     <div className="Equipement-culturel">
       <h1>LES LIEUX CULTURELS</h1>
       <div className="flexbuttons">
-        <button type="button" className="pictolieuxculturels">
-          <FontAwesomeIcon icon={faChessRook} className="pictoculture" />{" "}
-        </button>
-        <button type="button" className="pictolieuxculturels">
-          <FontAwesomeIcon icon={faBuildingColumns} className="pictoculture" />{" "}
-        </button>
-        <button type="button" className="pictolieuxculturels">
-          <FontAwesomeIcon icon={faFilm} className="pictoculture" />{" "}
-        </button>
-        <button type="button" className="pictolieuxculturels">
-          <FontAwesomeIcon icon={faBookOpenReader} className="pictoculture" />{" "}
-        </button>
+        <Button
+          setFilteredEquipements={setFilteredEquipements}
+          equipements={equipements}
+          filters={["Château", "Planétarium"]}
+          icon={faChessRook}
+        />
+
+        <Button
+          setFilteredEquipements={setFilteredEquipements}
+          equipements={equipements}
+          filters={["Musée", "Muséum d'Histoire", "Chronographe"]}
+          icon={faBuildingColumns}
+        />
+
+        <Button
+          setFilteredEquipements={setFilteredEquipements}
+          equipements={equipements}
+          filters={["Cinéma"]}
+          icon={faFilm}
+        />
+
+        <Button
+          setFilteredEquipements={setFilteredEquipements}
+          equipements={equipements}
+          filters={["Bibliothèque", "Médiathèque", "Centre"]}
+          icon={faBookOpenReader}
+        />
       </div>
       <h1 className="liste">
-        {equipements.map((equipement) => (
-          <Equipement equipement={equipement} />
+        {filteredEquipements.map((equipement) => (
+          <Equipement equipement={equipement} key={equipement.fields.idobj} />
         ))}
       </h1>
     </div>
