@@ -33,3 +33,28 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (min-width: 769px) {
+  .listeagenda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    margin-top: 25px;
+    margin-left: 6vw;
+  }
+
+  .pictoscategories {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 2.5rem;
+  }
+
+  .pictoagenda {
+    height: 2rem;
+  }
+
+  .alignpictoscategories {
+    display: flex;
+    justify-content: space-around;
+  }
+}

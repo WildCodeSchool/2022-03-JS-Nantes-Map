@@ -1,0 +1,35 @@
+.loading-img {
+  text-align: center;
+  margin: auto;
+  width: auto;
+}
+
+.EvenementCard {
+  width: 80vw;
+}
+
+@media screen and (min-width: 769px) {
+  .body-homepage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .loading-img {
+    margin: 30vw;
+  }
+  .photo {
+    height: 200px;
+  }
+  .EvenementCard {
+    width: 40vw;
+  }
+
+  .loading-img {
+    width: auto;
+  }
+
+  .EvenementCard h3 {
+    height: 7rem;
+  }
+}
