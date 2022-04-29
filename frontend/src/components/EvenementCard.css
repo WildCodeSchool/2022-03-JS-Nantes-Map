@@ -22,12 +22,13 @@
 
 .photo {
   max-width: 300px;
-  padding: 10px; b  
+  padding: 10px;
 }
 
 .description-event {
   overflow: auto;
   height: 10rem;
+  text-align: justify;
 }
 
 p {
@@ -60,6 +61,10 @@ a {
   margin: 10px;
 }
 
+.nom-lieu {
+  height: 2rem;
+}
+
 .buttonecard:hover {
   background: #666677;
   background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
@@ -67,7 +72,7 @@ a {
 
 @media screen and (min-width: 769px) {
   .EvenementCard {
-    font-size: 0.60em;
+    font-size: 0.8em;
     padding: 5px;
     width: 80%;
   }
@@ -81,10 +86,10 @@ a {
     margin-right: 1rem;
     margin-left: 1rem;
   }
-  
+
   .icone {
     height: 2rem;
-  }  
+  }
 
   .buttonecard {
     width: 150px;
