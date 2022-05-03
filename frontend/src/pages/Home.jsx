@@ -54,6 +54,7 @@ export default function Home() {
           <h1>CA SE PASSE BIENTOT...</h1>
           <EvenementCard event={randomEvent} />
         </div>
+
         <div className="event-free">
           <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
           <EvenementCard event={freeEvent} />
