@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Agenda.css";
 import EvenementCard from "@components/EvenementCard";
+import Input from "@components/Input";
 import ButtonAgenda from "@components/ButtonAgenda";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -103,10 +104,9 @@ function Agenda() {
           icon={faPalette}
         />
       </h2>
-
-      <h3 className="listeagenda">
+      <Input evenements={evenements} setFilteredEvenements={setFilteredEvenements}/>
+      <div className="listeagenda">
         {filteredEvenements.map((evenement) => (
-
           <EvenementCard event={evenement} />
         ))}
       </div>

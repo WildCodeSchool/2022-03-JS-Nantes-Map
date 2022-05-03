@@ -24,6 +24,10 @@
   color: var(--primary-color);
 }
 
+.picto-icone {
+  height: 1rem;
+}
+
 .Agenda {
   text-align: center;
 }

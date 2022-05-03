@@ -14,8 +14,17 @@ export default function EvenementCard({ event }) {
       <p>{event.fields.date}</p>
 
       <img className="icone" src="src/assets/lieu.png" alt="icone lieu" />
+      <p className="lieu">
+        {event.fields.lieu}<br/>
+        {event.fields.ville}<br/>
+        {event.fields.lieu_quartier}
+      </p>
 
-      <p className="nom-lieu">{event.fields.lieu}</p>
+      <img className="icone" src="src/assets/enfants.png" alt="icone enfants" />
+      <p className="enfant">Spécial enfant : {event.fields.accueil_enfant}</p>
+
+      <img className="icone" src="src/assets/euro.png" alt="icone euro" />
+      <p className="gratuit">Gratuit : {event.fields.gratuit}</p>
 
       <button className="buttonecard" type="button">
         <a
