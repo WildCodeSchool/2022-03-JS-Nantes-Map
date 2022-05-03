@@ -13,6 +13,7 @@ import {
   faGamepad,
   faPalette,
 } from "@fortawesome/free-solid-svg-icons";
+import ScrollButton from "@components/ScrollButton";
 
 function Agenda() {
   const [evenements, setEvenements] = useState([]);
@@ -105,9 +106,11 @@ function Agenda() {
       </h2>
 
       <div className="toto-agenda">
+
         {filteredEvenements.map((evenement) => (
           <EvenementCard event={evenement} />
         ))}
+        <ScrollButton />
       </div>
     </div>
   );
