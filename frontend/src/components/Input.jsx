@@ -27,12 +27,22 @@ export default function Input({ setFilteredEvenements, evenements }) {
 
   function handleCity(e) {
     const selectValue = e.target.value;
-    const cityEvents = evenements.filter(
-      (event) => event.fields.ville === selectValue
-    );
     if (selectValue === "Choisissez une ville") {
       setFilteredEvenements(evenements);
+    } else if (selectValue === "Autres") {
+      const cityEvents = evenements.filter(
+        (event) =>
+          event.fields.ville !== "Nantes" &&
+          event.fields.ville !== "Saint-Herblain" &&
+          event.fields.ville !== "Rezé" &&
+          event.fields.ville !== "Orvault" &&
+          event.fields.ville !== "Saint-Sébastien-sur-Loire"
+      );
+      setFilteredEvenements(cityEvents);
     } else {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
       setFilteredEvenements(cityEvents);
     }
   }
@@ -85,6 +95,28 @@ export default function Input({ setFilteredEvenements, evenements }) {
           <option value="Doulon - Bottière">Doulon - Bottière</option>
         </select>
       </div>
+
+      <select>
+        <optgroup label="Nantes" value ="Nantes">
+          <option value="Tout Nantes">Tout Nantes</option>
+          <option value="Bellevue">Bellevue</option>
+          <option value="Centre-ville">Centre-ville</option>
+          <option value="Ile de Nantes">Ile de Nantes</option>
+          <option value="Malakoff - Saint Donatien">Malakoff - Saint Donatien</option>
+          <option value="Hauts Pavés - Saint Félix">Hauts Pavés - Saint Félix</option>
+          <option value="Nantes Erdre">Nantes Erdre</option>
+          <option value="Dervallières - Zola">Dervallières - Zola</option>
+          <option value="Nantes Sud">Nantes Sud</option>
+          <option value="Doulon - Bottière">Doulon - Bottière</option>
+        </optgroup>
+        <optgroup label="Périphérie">
+          <option value="Saint-Herblain">Saint-Herblain</option>
+          <option value="Rezé">Rezé</option>
+          <option value="Saint-Sébastien-sur-Loire">Saint-Sébastien-sur-Loire</option>
+          <option value="Orvault">Orvault</option>
+          <option value="Autres">Autres</option>
+        </optgroup>
+      </select>
 
       <label htmlFor="free" className="checkbox">
         <div className="toto">

@@ -104,7 +104,10 @@ function Agenda() {
           icon={faPalette}
         />
       </h2>
-      <Input evenements={evenements} setFilteredEvenements={setFilteredEvenements}/>
+      <Input
+        evenements={evenements}
+        setFilteredEvenements={setFilteredEvenements}
+      />
       <div className="listeagenda">
         {filteredEvenements.map((evenement) => (
           <EvenementCard event={evenement} />

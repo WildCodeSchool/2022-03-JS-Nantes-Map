@@ -15,8 +15,10 @@ export default function EvenementCard({ event }) {
 
       <img className="icone" src="src/assets/lieu.png" alt="icone lieu" />
       <p className="lieu">
-        {event.fields.lieu}<br/>
-        {event.fields.ville}<br/>
+        {event.fields.lieu}
+        <br />
+        {event.fields.ville}
+        <br />
         {event.fields.lieu_quartier}
       </p>
 
