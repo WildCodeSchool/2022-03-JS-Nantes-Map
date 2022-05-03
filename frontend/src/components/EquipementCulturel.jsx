@@ -65,11 +65,13 @@ function EquipementCulturel() {
           icon={faBookOpenReader}
         />
       </div>
-      <h1 className="liste">
-        {filteredEquipements.map((equipement) => (
-          <Equipement equipement={equipement} key={equipement.fields.idobj} />
-        ))}
-      </h1>
+      <div className="liste">
+        <div className="toto-liste">
+          {filteredEquipements.map((equipement) => (
+            <Equipement equipement={equipement} key={equipement.fields.idobj} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

@@ -105,7 +105,8 @@ function Agenda() {
         />
       </h2>
 
-      <div className="listeagenda">
+      <div className="toto-agenda">
+
         {filteredEvenements.map((evenement) => (
           <EvenementCard event={evenement} />
         ))}
