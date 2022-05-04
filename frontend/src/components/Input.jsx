@@ -25,11 +25,93 @@ export default function Input({ setFilteredEvenements, evenements }) {
     }
   }
 
-  function handleCity(e) {
+  function handleLocation(e) {
     const selectValue = e.target.value;
-    if (selectValue === "Choisissez une ville") {
-      setFilteredEvenements(evenements);
-    } else if (selectValue === "Autres") {
+    if (selectValue === "Nantes") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Bellevue - Chantenay - Sainte-Anne") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Centre-ville") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Île de Nantes") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Malakoff - Saint-Donatien") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Hauts-Pavés - Saint-Félix") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Nantes Erdre") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Dervallières - Zola") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Nantes Sud") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Doulon - Bottière") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Saint-Herblain") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Rezé") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Saint-Sébastien-sur-Loire") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Orvault") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectValue === "Autres") {
       const cityEvents = evenements.filter(
         (event) =>
           event.fields.ville !== "Nantes" &&
@@ -39,71 +121,25 @@ export default function Input({ setFilteredEvenements, evenements }) {
           event.fields.ville !== "Saint-Sébastien-sur-Loire"
       );
       setFilteredEvenements(cityEvents);
-    } else {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-  }
-
-  function handleDistrict(e) {
-    const selectValue = e.target.value;
-    const districtEvents = evenements.filter(
-      (event) => event.fields.lieu_quartier === selectValue
-    );
-    if (selectValue === "Choisissez un quartier de Nantes") {
-      setFilteredEvenements(evenements);
-    } else {
-      setFilteredEvenements(districtEvents);
     }
   }
 
   return (
     <div className="inputstyle">
-      <div className="button-ville">
-        <select name="city" id="city" onChange={handleCity}>
-          <option value="Choisissez une ville">Choisissez une ville</option>
-          <option value="Nantes">Nantes</option>
-          <option value="Saint-Herblain">Saint-Herblain</option>
-          <option value="Rezé">Rezé</option>
-          <option value="Saint-Sébastien-sur-Loire">
-            Saint-Sébastien-sur-Loire
+      <select onChange={handleLocation}>
+        <optgroup label="Nantes" value="Nantes">
+          <option value="Nantes">Tous Quartiers</option>
+          <option value="Bellevue - Chantenay - Sainte-Anne">
+            Bellevue - Chantenay - Sainte-Anne
           </option>
-          <option value="Orvault">Orvault</option>
-          <option value="Autres">Autres</option>
-        </select>
-      </div>
-
-      <div className="button-quartier">
-        <select name="quartier" id="quartier" onChange={handleDistrict}>
-          <option value="Choisissez un quartier de Nantes">
-            Choisissez un quartier de Nantes
-          </option>
-          <option value="Bellevue">Bellevue</option>
           <option value="Centre-ville">Centre-ville</option>
-          <option value="Ile de Nantes">Ile de Nantes</option>
-          <option value="Malakoff - Saint Donatien">
-            Malakoff - Saint Donatien
+          <option value="Île de Nantes">Île de Nantes</option>
+          <option value="Malakoff - Saint-Donatien">
+            Malakoff - Saint-Donatien
           </option>
-          <option value="Hauts Pavés - Saint Félix">
-            Hauts Pavés - Saint Félix
+          <option value="Hauts-Pavés - Saint-Félix">
+            Hauts-Pavés - Saint Félix
           </option>
-          <option value="Nantes Erdre">Nantes Erdre</option>
-          <option value="Dervallières - Zola">Dervallières - Zola</option>
-          <option value="Nantes Sud">Nantes Sud</option>
-          <option value="Doulon - Bottière">Doulon - Bottière</option>
-        </select>
-      </div>
-
-      <select>
-        <optgroup label="Nantes" value ="Nantes">
-          <option value="Tout Nantes">Tout Nantes</option>
-          <option value="Bellevue">Bellevue</option>
-          <option value="Centre-ville">Centre-ville</option>
-          <option value="Ile de Nantes">Ile de Nantes</option>
-          <option value="Malakoff - Saint Donatien">Malakoff - Saint Donatien</option>
-          <option value="Hauts Pavés - Saint Félix">Hauts Pavés - Saint Félix</option>
           <option value="Nantes Erdre">Nantes Erdre</option>
           <option value="Dervallières - Zola">Dervallières - Zola</option>
           <option value="Nantes Sud">Nantes Sud</option>
@@ -112,14 +148,15 @@ export default function Input({ setFilteredEvenements, evenements }) {
         <optgroup label="Périphérie">
           <option value="Saint-Herblain">Saint-Herblain</option>
           <option value="Rezé">Rezé</option>
-          <option value="Saint-Sébastien-sur-Loire">Saint-Sébastien-sur-Loire</option>
+          <option value="Saint-Sébastien-sur-Loire">
+            Saint-Sébastien-sur-Loire
+          </option>
           <option value="Orvault">Orvault</option>
           <option value="Autres">Autres</option>
         </optgroup>
       </select>
-
       <label htmlFor="free" className="checkbox">
-        <div className="toto">
+        <div className="">
           Gratuit{"  "}
           <input
             type="checkbox"
@@ -131,7 +168,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
         </div>
       </label>
       <label htmlFor="children" className="checkbox">
-        <div className="toto">
+        <div className="">
           Enfant {"  "}
           <input
             type="checkbox"
