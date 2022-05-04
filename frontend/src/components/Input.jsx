@@ -27,90 +27,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
 
   function handleLocation(e) {
     const selectValue = e.target.value;
-    if (selectValue === "Nantes") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Bellevue - Chantenay - Sainte-Anne") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Centre-ville") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Île de Nantes") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Malakoff - Saint-Donatien") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Hauts-Pavés - Saint-Félix") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Nantes Erdre") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Dervallières - Zola") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Nantes Sud") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Doulon - Bottière") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Saint-Herblain") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Rezé") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Saint-Sébastien-sur-Loire") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Orvault") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
+    const selectOpt = e.target.selectedOptions[0].parentElement.dataset.value;
     if (selectValue === "Autres") {
       const cityEvents = evenements.filter(
         (event) =>
@@ -122,13 +39,50 @@ export default function Input({ setFilteredEvenements, evenements }) {
       );
       setFilteredEvenements(cityEvents);
     }
+    if (selectValue === "Nantes") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
+    if (selectOpt === "lieu_quartier") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.lieu_quartier === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    } else if (selectOpt === "ville" && selectValue !== "Autres") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    } else if (selectOpt === "Agenda") {
+      setFilteredEvenements(evenements);
+    } else if (selectOpt === "Nantes (tout)") {
+      const cityEvents = evenements.filter(
+        (event) => event.fields.ville === selectValue
+      );
+      setFilteredEvenements(cityEvents);
+    }
   }
 
   return (
     <div className="inputstyle">
       <select onChange={handleLocation}>
-        <optgroup label="Nantes" value="Nantes">
-          <option value="Nantes">Tous Quartiers</option>
+        <optgroup data-value="Agenda" label="Agenda" value="Agenda">
+          <option label="Tous les événements" value="Tous les événements" />
+        </optgroup>
+        <optgroup
+          data-value="Nantes (tout)"
+          label="Nantes (tout)"
+          value="Nantes (tout)"
+        >
+          <option value="Nantes">Tous les quartiers</option>
+        </optgroup>
+        <optgroup
+          data-value="lieu_quartier"
+          label="Quartiers de Nantes"
+          value="Nantes"
+        >
           <option value="Bellevue - Chantenay - Sainte-Anne">
             Bellevue - Chantenay - Sainte-Anne
           </option>
@@ -145,7 +99,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
           <option value="Nantes Sud">Nantes Sud</option>
           <option value="Doulon - Bottière">Doulon - Bottière</option>
         </optgroup>
-        <optgroup label="Périphérie">
+        <optgroup data-value="ville" label="Périphérie">
           <option value="Saint-Herblain">Saint-Herblain</option>
           <option value="Rezé">Rezé</option>
           <option value="Saint-Sébastien-sur-Loire">
