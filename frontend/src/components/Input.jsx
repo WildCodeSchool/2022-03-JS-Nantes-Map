@@ -38,31 +38,34 @@ export default function Input({ setFilteredEvenements, evenements }) {
           event.fields.ville !== "Saint-Sébastien-sur-Loire"
       );
       setFilteredEvenements(cityEvents);
-    }
-    if (selectValue === "Nantes") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    }
-    if (selectOpt === "lieu_quartier") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.lieu_quartier === selectValue
-      );
-      setFilteredEvenements(cityEvents);
-    } else if (selectOpt === "ville" && selectValue !== "Autres") {
-      const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
-      );
-      setFilteredEvenements(cityEvents);
     } else if (selectOpt === "Agenda") {
       setFilteredEvenements(evenements);
-    } else if (selectOpt === "Nantes (tout)") {
+    } else {
       const cityEvents = evenements.filter(
-        (event) => event.fields.ville === selectValue
+        (event) => event.fields[selectOpt] === selectValue
       );
       setFilteredEvenements(cityEvents);
     }
+    // if (selectValue === "Nantes") {
+    //   const cityEvents = evenements.filter(
+    //     (event) => event.fields.ville === selectValue
+    //   );
+    //   setFilteredEvenements(cityEvents);
+    // }
+    
+      
+    //  else if (selectOpt === "ville" && selectValue !== "Autres") {
+    //   const cityEvents = evenements.filter(
+    //     (event) => event.fields.ville === selectValue
+    //   );
+    //   setFilteredEvenements(cityEvents);
+   
+    // } else if (selectOpt === "Nantes (tout)") {
+    //   const cityEvents = evenements.filter(
+    //     (event) => event.fields.ville === selectValue
+    //   );
+    //   setFilteredEvenements(cityEvents);
+    // }
   }
 
   return (
@@ -72,7 +75,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
           <option label="Tous les événements" value="Tous les événements" />
         </optgroup>
         <optgroup
-          data-value="Nantes (tout)"
+          data-value="ville"
           label="Nantes (tout)"
           value="Nantes (tout)"
         >

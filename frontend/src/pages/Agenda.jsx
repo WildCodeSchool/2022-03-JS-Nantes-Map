@@ -110,7 +110,7 @@ function Agenda() {
       />
       <div className="listeagenda">
         {filteredEvenements.map((evenement) => (
-          <EvenementCard event={evenement} />
+          <EvenementCard key={evenement.recordid} event={evenement} />
         ))}
       </div>
     </div>
