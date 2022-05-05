@@ -44,12 +44,6 @@ a {
   text-decoration: none;
 }
 
-.body-homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .buttonecard {
   width: 200px;
   height: 50px;
