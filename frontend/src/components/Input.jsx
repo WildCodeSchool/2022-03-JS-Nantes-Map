@@ -6,9 +6,6 @@ export default function Input({ setFilteredEvenements, evenements }) {
     gratuit: "non",
     accueil_enfant: "non",
   });
-  const [selectedValue, setSelectedValue] = useState({
-    selectOpt: 
-  })
 
   function handleCheck(type, state) {
     selectedBoxes[type] = state ? "oui" : "non";
