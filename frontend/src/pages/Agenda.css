@@ -32,14 +32,14 @@
   text-align: center;
 }
 
-.toto-agenda {
+.listeagenda {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media screen and (min-width: 769px) {
-  .toto-agenda {
+  .listeagenda {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 20px;
