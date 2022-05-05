@@ -10,7 +10,9 @@ function Citytour() {
         <h1>CITY TOUR</h1>
         <Map />
       </div>
-      <EquipementCulturel />
+      <div className="toto-culturel">
+        <EquipementCulturel />
+      </div>
     </div>
   );
 }

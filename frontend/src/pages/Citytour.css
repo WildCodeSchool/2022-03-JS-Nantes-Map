@@ -1,11 +1,19 @@
 @media screen and (min-width: 769px) {
   .City-tour {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 
   .bloc-equipement {
     font-family: var(--body-font);
     font-size: 0.9rem;
+  }
+  .toto-culturel {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .liste {
+    display: flex;
+    justify-content: center;
   }
 }
