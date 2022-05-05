@@ -1,29 +1,31 @@
 import "./Input.css";
+import React, { useState, useEffect } from "react";
 
 export default function Input({ setFilteredEvenements, evenements }) {
-  function handleFree(e) {
-    const checkbox = e.target.checked;
-    const freeEvents = evenements.filter(
-      (event) => event.fields.gratuit === "oui"
-    );
-    if (checkbox) {
-      setFilteredEvenements(freeEvents);
-    } else {
-      setFilteredEvenements(evenements);
-    }
+  const [selectedBoxes, setSelectedBoxes] = useState({
+    gratuit: "non",
+    accueil_enfant: "non",
+  });
+  const [selectedValue, setSelectedValue] = useState({
+    selectOpt: 
+  })
+
+  function handleCheck(type, state) {
+    selectedBoxes[type] = state ? "oui" : "non";
+    setSelectedBoxes({
+      gratuit: selectedBoxes.gratuit,
+      accueil_enfant: selectedBoxes.accueil_enfant,
+    });
   }
 
-  function handleChildren(e) {
-    const checkbox = e.target.checked;
-    const childrenEvents = evenements.filter(
-      (event) => event.fields.accueil_enfant === "oui"
+  useEffect(() => {
+    const freeEvents = evenements.filter(
+      (event) =>
+        event.fields.gratuit === selectedBoxes.gratuit &&
+        event.fields.accueil_enfant === selectedBoxes.accueil_enfant
     );
-    if (checkbox) {
-      setFilteredEvenements(childrenEvents);
-    } else {
-      setFilteredEvenements(evenements);
-    }
-  }
+    setFilteredEvenements(freeEvents);
+  }, [selectedBoxes]);
 
   function handleLocation(e) {
     const selectValue = e.target.value;
@@ -100,7 +102,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
             className="free-checkbox"
             name="checkbox"
             id=""
-            onChange={handleFree}
+            onChange={(e) => handleCheck("gratuit", e.target.checked)}
           />
         </div>
       </label>
@@ -112,7 +114,7 @@ export default function Input({ setFilteredEvenements, evenements }) {
             className="free-checkbox"
             name="checkbox"
             id=""
-            onChange={handleChildren}
+            onChange={(e) => handleCheck("accueil_enfant", e.target.checked)}
           />
         </div>
       </label>
