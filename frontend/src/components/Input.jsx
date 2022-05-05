@@ -46,26 +46,6 @@ export default function Input({ setFilteredEvenements, evenements }) {
       );
       setFilteredEvenements(cityEvents);
     }
-    // if (selectValue === "Nantes") {
-    //   const cityEvents = evenements.filter(
-    //     (event) => event.fields.ville === selectValue
-    //   );
-    //   setFilteredEvenements(cityEvents);
-    // }
-    
-      
-    //  else if (selectOpt === "ville" && selectValue !== "Autres") {
-    //   const cityEvents = evenements.filter(
-    //     (event) => event.fields.ville === selectValue
-    //   );
-    //   setFilteredEvenements(cityEvents);
-   
-    // } else if (selectOpt === "Nantes (tout)") {
-    //   const cityEvents = evenements.filter(
-    //     (event) => event.fields.ville === selectValue
-    //   );
-    //   setFilteredEvenements(cityEvents);
-    // }
   }
 
   return (
