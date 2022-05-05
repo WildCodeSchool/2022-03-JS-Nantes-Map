@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Agenda.css";
 import EvenementCard from "@components/EvenementCard";
+import Input from "@components/Input";
 import ButtonAgenda from "@components/ButtonAgenda";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -105,10 +106,13 @@ function Agenda() {
         />
       </h2>
 
-      <div className="toto-agenda">
-
+      <Input
+        evenements={evenements}
+        setFilteredEvenements={setFilteredEvenements}
+      />
+      <div className="listeagenda">
         {filteredEvenements.map((evenement) => (
-          <EvenementCard event={evenement} />
+          <EvenementCard key={evenement.recordid} event={evenement} />
         ))}
         <ScrollButton />
       </div>
