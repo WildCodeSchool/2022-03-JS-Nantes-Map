@@ -1,3 +1,11 @@
+.description-map {
+  background-color: var(--brown-color);
+  text-align: center;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
 @media screen and (min-width: 769px) {
   .City-tour {
     display: flex;

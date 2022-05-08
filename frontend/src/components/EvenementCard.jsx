@@ -6,7 +6,7 @@ export default function EvenementCard({ event }) {
     <div className="EvenementCard">
       <h3>{event.fields.nom}</h3>
       <img className="photo" src={event.fields.media_url} alt="evenement.nom" />
-
+      
       <p className="description-event">{event.fields.description}</p>
 
       <img className="icone" src="src/assets/date.png" alt="icone date" />

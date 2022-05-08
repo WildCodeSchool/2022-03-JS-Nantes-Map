@@ -38,6 +38,15 @@
   align-items: center;
 }
 
+.description-agenda {
+  background-color: var(--brown-color);
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  padding-bottom: 5px;
+}
+
 @media screen and (min-width: 769px) {
   .listeagenda {
     display: grid;
@@ -60,5 +69,11 @@
   .alignpictoscategories {
     display: flex;
     justify-content: space-around;
+  }
+
+  .description-agenda {
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-bottom: 10px;
   }
 }
