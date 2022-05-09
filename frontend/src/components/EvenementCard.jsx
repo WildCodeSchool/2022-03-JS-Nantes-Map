@@ -12,12 +12,16 @@ export default function EvenementCard({ event }) {
     <div className="EvenementCard">
       <h3 className="title">{event.fields.nom}</h3>
       <div className="bloc-descri">
-        <img className="photo" src={event.fields.media_url} alt="evenement.nom" />
+        <img
+          className="photo"
+          src={event.fields.media_url}
+          alt="evenement.nom"
+        />
 
         <p className="description-event">{event.fields.description}</p>
       </div>
       <div className="AwesomeIcon">
-        <div>
+        <div className="bloclieu">
           <FontAwesomeIcon icon={faLocationDot} className="Icon" />
           <p className="lieu">
             {event.fields.lieu}
@@ -27,7 +31,7 @@ export default function EvenementCard({ event }) {
             {event.fields.lieu_quartier}
           </p>
         </div>
-        <div>
+        <div className="blocdate">
           <FontAwesomeIcon icon={faCalendarDays} className="Icon" />
           <p>{event.fields.date}</p>
         </div>

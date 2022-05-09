@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+h3.title {
+  text-align: center;
+}
+
 @media screen and (min-width: 769px) {
   .body-homepage {
     display: flex;
@@ -41,3 +45,5 @@
     width: auto;
   }
 }
+
+

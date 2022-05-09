@@ -32,6 +32,15 @@
   margin: 1rem;
 }
 
+.AwesomeIcon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 p {
   margin-bottom: 2rem;
 }
@@ -78,48 +87,48 @@ a {
     width: 80%;
   }
 
-.EvenementCard h3 {
-  font-size: 1.5em;
-}
-
-.bloc-descri {
-  display: flex;
-  flex-direction: row;
-}
-
-.photo {
-  max-width: 230px;
-}
-
-.description-event {
-  font-size: 1.3em;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  .EvenementCard h3 {
+    font-size: 1.5em;
   }
 
-.KidandFree {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  .bloc-descri {
+    display: flex;
+    flex-direction: row;
   }
 
-.AwesomeIcon {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin-top: 1rem;
-}
+  .photo {
+    max-width: 230px;
+  }
 
-.Icon {
-  height: 2rem;
-}
+  .description-event {
+    font-size: 1.3em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
 
-.lieu {
-  width: 200px;
-}
-  
-.buttonecard {
+  .KidandFree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .AwesomeIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  .Icon {
+    height: 2rem;
+  }
+
+  .lieu {
+    width: 200px;
+  }
+
+  .buttonecard {
     width: 200px;
     height: 60px;
   }
