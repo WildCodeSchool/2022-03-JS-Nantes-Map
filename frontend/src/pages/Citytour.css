@@ -4,6 +4,14 @@
   width: 18rem;
 }
 
+.presa-map {
+  background-color: #c7885e;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
 @media screen and (min-width: 769px) {
   .City-tour {
     display: flex;
@@ -15,7 +23,7 @@
     font-size: 0.9rem;
     width: 20rem;
   }
-  .toto-culturel {
+  .container-culturel {
     display: flex;
     justify-content: space-evenly;
   }

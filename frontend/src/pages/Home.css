@@ -5,10 +5,10 @@
 }
 
 .EvenementCard {
-  width: 80vw;
+  width: 90vw;
 }
 
-.body-homepage {
+.event-soon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,11 +24,19 @@ h3.title {
   text-align: center;
 }
 
+.presa-page {
+  background-color: #c7885e;
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 769px) {
-  .body-homepage {
+  .align-cards {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .loading-img {
@@ -43,5 +51,11 @@ h3.title {
 
   .loading-img {
     width: auto;
+  }
+
+
+  .body-homepage {
+    margin-right: 50px;
+    margin-left: 50px;
   }
 }
