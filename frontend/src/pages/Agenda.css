@@ -38,6 +38,19 @@
   align-items: center;
 }
 
+.load-button {
+  height: 3rem;
+  background: #666677;
+  background: linear-gradient(0deg, #ddaa88 0%, #f7cfb5 100%);
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.load-button:hover {
+  background: #666677;
+  background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
+}
+
 @media screen and (min-width: 769px) {
   .listeagenda {
     display: grid;

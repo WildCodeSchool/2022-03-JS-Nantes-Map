@@ -19,6 +19,8 @@ import ScrollButton from "@components/ScrollButton";
 function Agenda() {
   const [evenements, setEvenements] = useState([]);
   const [filteredEvenements, setFilteredEvenements] = useState([]);
+  const [maxRange, setMaxRange] = useState(10);
+
   function isComing(date) {
     const dateToday = new Date().setHours(0, 0, 0, 0);
     const dateEvent = new Date(date).setHours(0, 0, 0, 0);
@@ -43,6 +45,10 @@ function Agenda() {
         setFilteredEvenements(incomingEvents);
       });
   }, []);
+
+  function loadMore() {
+    setMaxRange((prevRange) => prevRange + 8);
+  }
 
   function eventSport() {
     const filterSport = evenements.filter(
@@ -111,11 +117,14 @@ function Agenda() {
         setFilteredEvenements={setFilteredEvenements}
       />
       <div className="listeagenda">
-        {filteredEvenements.map((evenement) => (
+        {filteredEvenements.slice(0, maxRange).map((evenement) => (
           <EvenementCard key={evenement.recordid} event={evenement} />
         ))}
         <ScrollButton />
       </div>
+      <button type="button" className="load-button" onClick={loadMore}>
+        {`Voir plus d'événements`}
+      </button>
     </div>
   );
 }
