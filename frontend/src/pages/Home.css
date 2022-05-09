@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+h3.title {
+  text-align: center;
+}
+
 .presa-page {
   background-color: #c7885e;
   text-align: center;
@@ -27,7 +31,6 @@
   margin: 2rem;
   border-radius: 10px;
 }
-
 
 @media screen and (min-width: 769px) {
   .align-cards {
@@ -50,9 +53,6 @@
     width: auto;
   }
 
-  .EvenementCard h3 {
-    height: 7rem;
-  }
 
   .body-homepage {
     margin-right: 50px;

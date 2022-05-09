@@ -1,3 +1,9 @@
+.bloc-equipement {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  width: 18rem;
+}
+
 .presa-map {
   background-color: #c7885e;
   text-align: center;
@@ -15,6 +21,7 @@
   .bloc-equipement {
     font-family: var(--body-font);
     font-size: 0.9rem;
+    width: 20rem;
   }
   .container-culturel {
     display: flex;

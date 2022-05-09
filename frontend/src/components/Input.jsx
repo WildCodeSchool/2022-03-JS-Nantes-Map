@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 
 export default function Input({ setFilteredEvenements, evenements }) {
   const [selectedBoxes, setSelectedBoxes] = useState({
-    gratuit: "non",
-    accueil_enfant: "non",
+    gratuit: "oui",
+    accueil_enfant: "oui",
   });
 
   function handleCheck(type, state) {

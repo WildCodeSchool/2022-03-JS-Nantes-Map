@@ -29,19 +29,38 @@
   overflow: auto;
   height: 10rem;
   text-align: justify;
+  margin: 1rem;
+}
+
+.AwesomeIcon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 p {
   margin-bottom: 2rem;
 }
 
-.icone {
-  margin-bottom: 0.5em;
+.KidandFree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Icon {
+  height: 1.5rem;
 }
 
 a {
   color: var(----darker-color);
   text-decoration: none;
+}
+.nom-lieu {
+  height: 2rem;
 }
 
 .buttonecard {
@@ -55,10 +74,6 @@ a {
   margin: 10px;
 }
 
-.nom-lieu {
-  height: 2rem;
-}
-
 .buttonecard:hover {
   background: #666677;
   background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
@@ -66,9 +81,19 @@ a {
 
 @media screen and (min-width: 769px) {
   .EvenementCard {
-    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
     padding: 5px;
     width: 80%;
+  }
+
+  .EvenementCard h3 {
+    font-size: 1.5em;
+  }
+
+  .bloc-descri {
+    display: flex;
+    flex-direction: row;
   }
 
   .photo {
@@ -81,15 +106,33 @@ a {
     margin-left: 2rem;
   }
 
-  .icone {
-    height: 3rem;
+  .KidandFree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .AwesomeIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  .Icon {
+    height: 2rem;
+  }
+
+  .lieu {
+    width: 200px;
   }
 
   .buttonecard {
-    width: 150px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
   }
   .textebutton {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
