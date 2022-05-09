@@ -8,12 +8,12 @@ function Citytour() {
     <div className="City-tour">
       <div className="container-city">
         <h1>CITY TOUR</h1>
-        <Map />
         <div className="description-map">
-          <p>Localiser les lieux d'intérêts de Nantes et de sa région.</p>
+          <p className="presa-map">{`Localisez les lieux d'intérêts de Nantes et de sa région.`}</p>
         </div>
+        <Map />
       </div>
-      <div className="toto-culturel">
+      <div className="container-culturel">
         <EquipementCulturel />
       </div>
     </div>

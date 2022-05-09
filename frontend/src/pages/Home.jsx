@@ -51,11 +51,12 @@ export default function Home() {
     return (
       <div className="body-homepage">
         <div className="description">
-          <p>
-            MAP : Monuments, Arts et Patrimoine. C'est le site qui référence
+          <p className="presa-page">
+            MAP : Monuments, Arts et Patrimoine. 
+            <br />{`C'est le site qui référence
             l'offre culturel à Nantes pour tous. Vous aurez accès à l'agenda des
             événements culturels, à une carte des endroits mémorables de la
-            ville, ainsi que la liste des équipements culturels.
+            ville, ainsi que la liste des équipements culturels.`}
           </p>
         </div>
         <div className="align-cards">

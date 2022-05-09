@@ -54,9 +54,10 @@ function Agenda() {
   return (
     <div className="Agenda">
       <div className="description-agenda">
-          <p>Retrouvez les offres culturels de Nantes et de sa région.
-            Utilisez les pictogrammes pour sélectionner les événements selon vos préférences.
-          </p>
+        <p className="presa-agenda">
+          Retrouvez les offres culturels de Nantes et de sa région. Utilisez les
+          pictogrammes pour sélectionner les événements selon vos préférences.
+        </p>
       </div>
       <h1>AGENDA</h1>
       <h2 className="alignpictoscategories">
