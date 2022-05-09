@@ -38,6 +38,14 @@
   align-items: center;
 }
 
+.presa-agenda {
+  background-color: #c7885e;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
 @media screen and (min-width: 769px) {
   .listeagenda {
     display: grid;
@@ -60,5 +68,11 @@
   .alignpictoscategories {
     display: flex;
     justify-content: space-around;
+  }
+
+  .presa-agenda {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: #c7885e;
   }
 }

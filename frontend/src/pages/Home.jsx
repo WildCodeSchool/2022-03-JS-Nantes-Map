@@ -50,14 +50,25 @@ export default function Home() {
   if (randomEvent && freeEvent) {
     return (
       <div className="body-homepage">
-        <div className="event-soon">
-          <h1>CA SE PASSE BIENTOT...</h1>
-          <EvenementCard event={randomEvent} />
+        <div className="description">
+          <p className="presa-page">
+            MAP : Monuments, Arts et Patrimoine. 
+            <br />{`C'est le site qui référence
+            l'offre culturel à Nantes pour tous. Vous aurez accès à l'agenda des
+            événements culturels, à une carte des endroits mémorables de la
+            ville, ainsi que la liste des équipements culturels.`}
+          </p>
         </div>
+        <div className="align-cards">
+          <div className="event-soon">
+            <h1>CA SE PASSE BIENTOT...</h1>
+            <EvenementCard event={randomEvent} />
+          </div>
 
-        <div className="event-free">
-          <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
-          <EvenementCard event={freeEvent} />
+          <div className="event-free">
+            <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
+            <EvenementCard event={freeEvent} />
+          </div>
         </div>
       </div>
     );
