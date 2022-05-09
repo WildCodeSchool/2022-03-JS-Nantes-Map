@@ -30,7 +30,7 @@ function Agenda() {
 
   useEffect(() => {
     fetch(
-      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&rows=5645"
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&rows=200"
     )
       .then((res) => res.json())
       .then((data) => {
