@@ -30,7 +30,7 @@ function Agenda() {
 
   useEffect(() => {
     fetch(
-      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&rows=200"
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&rows=5073"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -55,8 +55,9 @@ function Agenda() {
     <div className="Agenda">
       <div className="description-agenda">
         <p className="presa-agenda">
-          Retrouvez les offres culturels de Nantes et de sa région. Utilisez les
-          pictogrammes pour sélectionner les événements selon vos préférences.
+          Retrouvez les offres culturelles de Nantes et de sa région. Utilisez
+          les pictogrammes pour sélectionner les événements selon vos
+          préférences.
         </p>
       </div>
       <h1>AGENDA</h1>
