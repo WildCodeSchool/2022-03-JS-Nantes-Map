@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faTwitter,
-  faLinkedin,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
@@ -25,7 +25,7 @@ export default function Footer() {
           type="button"
           className="pictoreseaux"
           onClick={() => {
-            window.location.href = "/https://www.instagram.com";
+            window.location.href = "/https://twitter.com";
           }}
         >
           <FontAwesomeIcon icon={faTwitter} className="pictoFooter" />{" "}
@@ -34,10 +34,10 @@ export default function Footer() {
           type="button"
           className="pictoreseaux"
           onClick={() => {
-            window.location.href = "/https://twitter.com";
+            window.location.href = "/https://www.instagram.com";
           }}
         >
-          <FontAwesomeIcon icon={faLinkedin} className="pictoFooter" />{" "}
+          <FontAwesomeIcon icon={faInstagram} className="pictoFooter" />{" "}
         </button>
       </h2>
     </footer>
