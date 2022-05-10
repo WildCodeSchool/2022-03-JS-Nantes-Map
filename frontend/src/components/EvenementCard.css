@@ -20,9 +20,14 @@
   color: var(--brighter-color);
 }
 
+.bloc-descri {
+  text-align: center;
+}
+
 .photo {
   max-width: 300px;
-  padding: 10px;
+  text-align: center;
+
 }
 
 .description-event {
