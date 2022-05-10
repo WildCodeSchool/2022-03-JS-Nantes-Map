@@ -12,12 +12,12 @@ export default function Navbar() {
       <div className="bannière">
         <Link to="/">
           <img
-            src="src/assets/banmob.png"
+            src="dist/assets/banmob.png"
             className="bannieremobile"
             alt="bannièremobile"
           />
           <img
-            src="src/assets/bandesk.png"
+            src="dist/assets/bandesk.png"
             className="bannieredesktop"
             alt="bannièredesktop"
           />
