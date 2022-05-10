@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
+import banmob from "../assets/banmob.png";
+import bandesk from "../assets/bandesk.png";
 
 const getActiveLinkStyle = ({ isActive }) => {
   if (isActive) return { backgroundColor: "#f7cfb5", color: "black" };
@@ -11,13 +13,9 @@ export default function Navbar() {
     <div className="navbar">
       <div className="bannière">
         <Link to="/">
+          <img src={banmob} className="bannieremobile" alt="bannièremobile" />
           <img
-            src="dist/assets/banmob.png"
-            className="bannieremobile"
-            alt="bannièremobile"
-          />
-          <img
-            src="dist/assets/bandesk.png"
+            src={bandesk}
             className="bannieredesktop"
             alt="bannièredesktop"
           />
