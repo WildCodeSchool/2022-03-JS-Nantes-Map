@@ -1,0 +1,153 @@
+.EvenementCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+  width: 90%;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px #666677;
+  font-size: 0.75em;
+  background-color: var(--primary-color);
+  color: var(--brighter-color);
+  margin-bottom: 2rem;
+}
+
+.EvenementCard h3 {
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: var(--title-font);
+  font-size: 1.2em;
+  color: var(--brighter-color);
+}
+
+.bloc-descri {
+  text-align: center;
+}
+
+.photo {
+  max-width: 80vw;
+  text-align: center;
+}
+
+.description-event {
+  overflow: auto;
+  height: 10rem;
+  text-align: justify;
+  margin: 1rem;
+}
+
+.AwesomeIcon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.KidandFree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Icon {
+  height: 1.5rem;
+}
+
+a {
+  color: var(----darker-color);
+  text-decoration: none;
+}
+.nom-lieu {
+  height: 2rem;
+}
+
+.buttonecard {
+  width: 200px;
+  height: 50px;
+  font-family: var(--title-font);
+  text-align: center;
+  background: #666677;
+  background: linear-gradient(0deg, #ddaa88 0%, #f7cfb5 100%);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.buttonecard:hover {
+  background: #666677;
+  background: linear-gradient(0deg, #f7cfb5 0%, #ddaa88 100%);
+}
+
+@media screen and (min-width: 769px) {
+  .EvenementCard {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 80%;
+  }
+
+  h3.title {
+    height: 5rem;
+  }
+
+  .EvenementCard h3 {
+    font-size: 1.5em;
+  }
+
+  .bloc-descri {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .photo {
+    max-width: 15vw;
+    max-height: 12vw;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .description-event {
+    font-size: 1em;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    width: 22vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .KidandFree {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .AwesomeIcon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+  }
+
+  .Icon {
+    height: 2rem;
+  }
+
+  .lieu {
+    width: 10rem;
+    height: 5rem;
+  }
+
+  .buttonecard {
+    width: 200px;
+    height: 60px;
+  }
+  .textebutton {
+    font-size: 1em;
+  }
+}

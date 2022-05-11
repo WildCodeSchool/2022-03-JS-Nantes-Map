@@ -1,0 +1,34 @@
+.bloc-equipement {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  width: 18rem;
+}
+
+.presa-map {
+  background-color: #c7885e;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+}
+@media screen and (min-width: 769px) {
+  .City-tour {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .bloc-equipement {
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+    width: 20rem;
+  }
+  .container-culturel {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .liste {
+    display: flex;
+    justify-content: center;
+  }
+}

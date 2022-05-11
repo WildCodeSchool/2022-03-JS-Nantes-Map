@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #446699;
+  --brown-color: #ddaa88;
+  --beige-color: #f7cfb5;
+  --brighter-color: #f4edde;
+  --darker-color: #666677;
+
+  --title-font: "Happy Monkey", cursive;
+  --body-font: "Kanit", sans-serif;
+}
+
+.pictoscategories {
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 3px 2px 2px #666677;
+  margin: 1rem;
+  background-color: white;
+}
+
+.pictoagenda {
+  height: 1.5rem;
+  color: var(--primary-color);
+}
+
+.picto-icone {
+  height: 1rem;
+}
+
+.Agenda {
+  text-align: center;
+}
+
+.listeagenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presa-agenda {
+  background-color: #c7885e;
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 769px) {
+  .listeagenda {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    margin-top: 25px;
+    margin-left: 6vw;
+  }
+
+  .pictoscategories {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 2.5rem;
+  }
+
+  .pictoagenda {
+    height: 2rem;
+  }
+
+  .alignpictoscategories {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .presa-agenda {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: #c7885e;
+  }
+}

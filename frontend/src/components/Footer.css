@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #446699;
+  --brown-color: #ddaa88;
+  --beige-color: #f7cfb5;
+  --brighter-color: #f4edde;
+  --darker-color: #666677;
+
+  --title-font: "Happy Monkey", cursive;
+  --body-font: "Kanit", sans-serif;
+}
+
+footer {
+  background-color: #ddaa88;
+  width: 100vw;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.2rem;
+}
+
+.titleslogan {
+  font-size: 0.7rem;
+  margin-left: 0.7rem;
+  color: black;
+}
+
+h2 .pictoFooter {
+  height: 1.2rem;
+  color: var(--primary-color);
+}
+
+.pictoreseaux {
+  height: 2.2rem;
+  width: 2.2rem;
+  border: none;
+  border-radius: 1.2rem;
+  box-shadow: 1.5px 1.5px 1.5px #666677;
+  margin: 0.2rem;
+}
+
+h2.alignpictos {
+  margin-right: 0.7rem;
+}
+@media screen and (min-width: 769px) {
+  .titleslogan {
+    font-size: 1rem;
+  }
+
+  .pictoreseaux {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 15rem;
+  }
+  h2 .pictoFooter {
+    height: 1.5rem;
+  }
+}

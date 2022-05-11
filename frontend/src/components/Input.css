@@ -1,0 +1,16 @@
+.inputstyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px;
+}
+
+@media screen and (min-width: 769px) {
+  .inputstyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px;
+    font-size: 2rem;
+  }
+}

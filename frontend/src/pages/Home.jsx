@@ -1,36 +1,84 @@
-import Counter from "@components/Counter";
-import logo from "@assets/logo.svg";
+/* eslint-disable no-use-before-define */
+import React, { useState, useEffect } from "react";
+import EvenementCard from "@components/EvenementCard";
+import "./Home.css";
 
 export default function Home() {
+  const [randomEvent, setRandomEvent] = useState(null);
+  const [freeEvent, setFreeEvent] = useState(null);
+
+  function fetchData() {
+    fetch(
+      "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&rows=5645"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const incomingEvents = data.records.filter((event) =>
+          isNotFinished(event.fields.date)
+        );
+        generateRandomEvent(incomingEvents);
+        generateFreeEvent(incomingEvents);
+      });
+  }
+
+  function isNotFinished(date) {
+    const eventDate = new Date(date).setHours(0, 0, 0, 0);
+    const todayDate = new Date().setHours(0, 0, 0, 0);
+    if (eventDate >= todayDate) {
+      return true;
+    }
+    return false;
+  }
+
+  function generateRandomEvent(events) {
+    const rand = Math.floor(Math.random() * events.length);
+    const randEvent = events[rand];
+    setRandomEvent(randEvent);
+  }
+
+  function generateFreeEvent(events) {
+    const freeEvents = events.filter((event) => event.fields.gratuit === "oui");
+    const rand = Math.floor(Math.random() * freeEvents.length);
+    const randomFreeEvent = freeEvents[rand];
+    setFreeEvent(randomFreeEvent);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (randomEvent && freeEvent) {
+    return (
+      <div className="body-homepage">
+        <div className="description">
+          <p className="presa-page">
+            MAP : Monuments, Arts et Patrimoine.
+            <br />
+            {`C'est le site qui référence
+            l'offre culturelle à Nantes. Vous aurez accès à l'agenda des
+            événements culturels, à une carte des endroits remarquables de la
+            ville, ainsi qu'à la liste des équipements culturels.`}
+          </p>
+        </div>
+        <div className="align-cards">
+          <div className="event-soon">
+            <h1>CA SE PASSE BIENTOT...</h1>
+            <EvenementCard event={randomEvent} />
+          </div>
+
+          <div className="event-free">
+            <h1>{`CA SE PASSE BIENTOT... ET C'EST GRATUIT!`}</h1>
+            <EvenementCard event={freeEvent} />
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>Hello Vite + React !</p>
-
-      <Counter />
-
-      <p>
-        Edit <code>App.jsx</code> and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {" | "}
-        <a
-          className="App-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </header>
+    <img
+      src="https://cutewallpaper.org/21/loading-gif-transparent-background/Tag-For-Loading-Bar-Gif-Transparent-Loading-Gif-.gif"
+      alt="loading"
+      className="loading-img"
+    />
   );
 }
